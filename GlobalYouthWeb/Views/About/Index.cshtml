@@ -1,0 +1,78 @@
+﻿@model IEnumerable<GlobalYouthWeb.Models.About>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+
+
+
+
+@foreach (var item in Model)
+{
+    <!--about-starts-->
+    <div class="about">
+        <div class="container">
+            <div class="about-top heading">
+                <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+            </div>
+            <div class="about-bottom">
+                <div class="col-md-5 about-left">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathOne)"
+                         alt="" />
+                </div>
+                <div class="col-md-7 about-right">
+                    <h4>@Html.DisplayFor(modelItem => item.SubTitle)</h4>
+                    <p>@Html.DisplayFor(modelItem => item.BodyOne)</p>
+                    <p>@Html.DisplayFor(modelItem => item.BodyTwo)</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--about-end-->
+    <!--why-starts-->
+    <div class="why">
+        <div class="container">
+            <div class="why-top heading">
+                <h3>@Html.DisplayFor(modelItem => item.TitleTwo)</h3>
+                <p>@Html.DisplayFor(modelItem => item.BodyThree)</p>
+            </div>
+            <div class="why-bottom">
+                <div class="col-md-7 why-left">
+                    <div class="why-1">
+                        <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+                        <div class="why-text">
+                            <h4>@Html.DisplayFor(modelItem => item.TitleThree)</h4>
+                            <p>@Html.DisplayFor(modelItem => item.BodyFour)</p>
+                        </div>
+                    </div>
+                    <div class="why-2">
+                        <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                        <div class="why-text">
+                            <h4>@Html.DisplayFor(modelItem => item.TitleFour)</h4>
+                            <p>@Html.DisplayFor(modelItem => item.BodyFive)</p>
+                        </div>
+                    </div>
+                    <div class="why-2">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        <div class="why-text">
+                            <h4>@Html.DisplayFor(modelItem => item.TitleFive)</h4>
+                            <p>@Html.DisplayFor(modelItem => item.BodySix)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 why-right">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathTwo)" alt="" />
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--why-end-->
+    <p>
+        @Html.ActionLink("Edit this page here...", "Edit", new { id = item.ID })
+    </p>
+
+}

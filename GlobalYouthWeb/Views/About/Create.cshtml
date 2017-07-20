@@ -1,0 +1,220 @@
+﻿@model GlobalYouthWeb.Models.About
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<ol class="breadcrumb">
+
+    <li class="breadcrumb-item">Create<i class="fa fa-angle-right"></i></li>
+</ol>
+
+
+@using (Html.BeginForm("Create", "About", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="grid-form">
+
+        <div class="grid-form1">
+
+            <h3>About</h3>
+            <div class="tab-content">
+                <div class="tab-pane active" id="horizontal-form">
+                    <form class="form-horizontal">
+
+
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Title, "",new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathOne,htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathOne" title="Upload a  image"
+                                       type="file" name="fileOne"
+                                       accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathOne, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.SubTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.SubTitle, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.SubTitle,"", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyOne, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyOne, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.BodyOne, "",new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyTwo, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.BodyTwo, "",new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleTwo, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.TitleTwo,"", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyThree, htmlAttributes:new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyThree, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.BodyThree,"", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleThree, htmlAttributes:new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleThree, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.TitleThree,"", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyFour, htmlAttributes:new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyFour, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.BodyFour,"", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleFour, htmlAttributes:new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleFour, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.TitleFour,"", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyFive, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyFive, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.BodyFive,"", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleFive, htmlAttributes:new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleFive, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.TitleFive,"", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodySix, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodySix, new { htmlAttributes = new { @class = "form-control" }})
+                                @Html.ValidationMessageFor(model => model.BodySix, "",new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+                        
+                      
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathOne, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathTwo" title="Upload a  image"
+                                       type="file" name="fileTwo"
+                                       accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathOne, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                        <center>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Create"
+                                           class="btn-primary btn" />
+                                </div>
+                            </div>
+
+                        </center>
+
+                        <br />
+                        <br />
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+}
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

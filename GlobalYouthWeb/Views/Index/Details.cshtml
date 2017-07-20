@@ -1,0 +1,507 @@
+﻿@model GlobalYouthWeb.Models.Index
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Index</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bannerTitleOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bannerTitleOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bannerBodyOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bannerBodyOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bannerTitleTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bannerTitleTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bannerBodyTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bannerBodyTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bannerTitleThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bannerTitleThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bannerBodyThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bannerBodyThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeSubTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeSubTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeBody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeContentTitleOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeContentTitleOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeContentOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeContentOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeContentTitleTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeContentTitleTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeContentTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeContentTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeContentTitleThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeContentTitleThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeContentThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeContentThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeContentTitleFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeContentTitleFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.welcomeContentFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.welcomeContentFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventBody)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventBody)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventImagePathOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventImagePathOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventContentTitleOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventContentTitleOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventContentOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventContentOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventImagePathTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventImagePathTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventTitleTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventTitleTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventImagePathThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventImagePathThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventTitleThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventTitleThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventImagePathFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventImagePathFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventTitleFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventTitleFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventImagePathFive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventImagePathFive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventTitleFive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventTitleFive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.helpImagePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.helpImagePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.helpTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.helpTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.helpSubTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.helpSubTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.helpContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.helpContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamImagePathOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamImagePathOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamNameOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamNameOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamNameContentOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamNameContentOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTextNameOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTextNameOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTextContentOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTextContentOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamImagePathTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamImagePathTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamNameTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamNameTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamNameContentTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamNameContentTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTextNameTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTextNameTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTextContentTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTextContentTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamImagePathThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamImagePathThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamNameThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamNameThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamNameContentThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamNameContentThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTextNameThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTextNameThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTextContentThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTextContentThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamImagePathFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamImagePathFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamNameFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamNameFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamNameContentFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamNameContentFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTextNameFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTextNameFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.teamTextContentFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teamTextContentFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.companyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.companyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addressContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addressContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mobileOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobileOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mobileTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobileTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.companyEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.companyEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

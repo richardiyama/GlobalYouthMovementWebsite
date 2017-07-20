@@ -1,0 +1,132 @@
+﻿@model IEnumerable<GlobalYouthWeb.Models.Gallery>
+
+@{
+    ViewBag.Title = "Gallery";
+    
+}
+
+@foreach (var item in Model)
+{
+    <!--gallery-starts-->
+    <div class="gallery">
+        <div class="container">
+            <div class="gallery-top heading">
+                <h3>@Html.DisplayFor(modelItem => item.TitleOne)</h3>
+            </div>
+            <div class="gallery-bottom grid">
+                <div class="g-1">
+                    <div class="col-md-3 g-left">
+                        <a href="images/@Html.DisplayFor(modelItem => item.ImagePathOne)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathOneTwo)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleTwo)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodyTwo)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-3 g-left">
+                        <a href="~/images/@Html.DisplayFor(modelItem => item.ImagePathTwo)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathTwoTwo)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleThree)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodyThree)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-6 g-right">
+                        <a href="~/images/@Html.DisplayFor(modelItem => item.ImagePathThree)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathThreeTwo)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleFour)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodyFour)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="g-2">
+                    <div class="col-md-6 g-right">
+                        <a href="~/images/@Html.DisplayFor(modelItem => item.ImagePathFour)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathFourThree)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleFive)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodyFive)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-3 g-left">
+                        <a href="~/images/@Html.DisplayFor(modelItem => item.ImagePathFive)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathFiveFour)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleSix)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodySix)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-3 g-left">
+                        <a href="~/images/@Html.DisplayFor(modelItem => item.ImagePathSix)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathSixFive)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleSeven)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodySeven)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="g-2">
+                    <div class="col-md-3 g-left">
+                        <a href="~/images/@Html.DisplayFor(modelItem => item.ImagePathSeven)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathSevenSix)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleEight)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodyEight)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-3 g-left">
+                        <a href="~/images/@Html.DisplayFor(modelItem => item.ImagePathEight)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathEightSeven)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleNine)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodyNine)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-md-6 g-right">
+                        <a href="~/images/@Html.DisplayFor(modelItem => item.ImagePathNine)" rel="title" class="b-link-stripe b-animate-go  thickbox">
+                            <figure class="effect-oscar">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePathNineEight)" alt="img09" />
+                                <figcaption>
+                                    <h2>@Html.DisplayFor(modelItem => item.TitleTen)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.BodyTen)</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!--gallery-end-->
+}

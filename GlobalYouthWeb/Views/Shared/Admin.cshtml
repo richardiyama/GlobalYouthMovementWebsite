@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="~/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Global Youth Movement</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div class="page-container">
+
+        <!--/content-inner-->
+        <!--/sidebar-menu-->
+        <div class="sidebar-menu">
+            <header class="logo1">
+                <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a>
+            </header>
+            <div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
+            <div class="menu">
+                <ul id="menu">
+                    <li><a href="index.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span><div class="clearfix"></div></a></li>
+
+
+                    <li id="menu-academico"><a href="inbox.html"><i class="fa fa-envelope nav_icon"></i><span>Inbox</span><div class="clearfix"></div></a></li>
+                    <li><a href="gallery.html"><i class="fa fa-picture-o" aria-hidden="true"></i><span>Gallery</span><div class="clearfix"></div></a></li>
+                    <li id="menu-academico"><a href="charts.html"><i class="fa fa-bar-chart"></i><span>Charts</span><div class="clearfix"></div></a></li>
+                    <li id="menu-academico">
+                        <a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i><span> Short Codes</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+                        <ul id="menu-academico-sub">
+                            <li id="menu-academico-avaliacoes"><a href="icons.html">Icons</a></li>
+                            <li id="menu-academico-avaliacoes"><a href="typography.html">Typography</a></li>
+                            <li id="menu-academico-avaliacoes"><a href="faq.html">Faq</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-academico"><a href="errorpage.html"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span>Error Page</span><div class="clearfix"></div></a></li>
+                    <li id="menu-academico">
+                        <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i><span> UI Components</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+                        <ul id="menu-academico-sub">
+                            <li id="menu-academico-avaliacoes"><a href="button.html">Buttons</a></li>
+                            <li id="menu-academico-avaliacoes"><a href="grid.html">Grids</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tabels.html"><i class="fa fa-table"></i>  <span>Tables</span><div class="clearfix"></div></a></li>
+                    <li><a href="maps.html"><i class="fa fa-map-marker" aria-hidden="true"></i>  <span>Maps</span><div class="clearfix"></div></a></li>
+                    <li id="menu-academico">
+                        <a href="#"><i class="fa fa-file-text-o"></i>  <span>Pages</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+                        <ul id="menu-academico-sub">
+                            <li id="menu-academico-boletim"><a href="calendar.html">Calendar</a></li>
+                            <li id="menu-academico-avaliacoes"><a href="signin.html">Sign In</a></li>
+                            <li id="menu-academico-avaliacoes"><a href="signup.html">Sign Up</a></li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-check-square-o nav_icon"></i><span>Forms</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+                        <ul>
+                            <li><a href="input.html"> Input</a></li>
+                            <li><a href="validation.html">Validation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="left-content">
+            <div class="mother-grid-inner">
+                <!--header start here-->
+                <div class="header-main">
+                    <div class="logo-w3-agile">
+                        <h1><a href="index.html">Global Youth Movement</a></h1>
+                        <div class="clearfix"> </div>
+                    </div>
+                    
+                   
+                    <div class="profile_details w3l">
+                        <ul>
+                            <li class="dropdown profile_details_drop">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <div class="profile_img">
+                                        <span class="prfil-img"><img src="images/in4.jpg" alt=""> </span>
+                                        <div class="user-name">
+                                            <p>Malorum</p>
+                                            <span>Administrator</span>
+                                        </div>
+                                        <i class="fa fa-angle-down"></i>
+                                        <i class="fa fa-angle-up"></i>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu drp-mnu">
+                                    <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
+                                    <li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li>
+                                    <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="clearfix"> </div>
+                </div>
+                @RenderBody()
+              
+
+                <div class="copyrights">
+                    <p>© 2016 Pooled. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                </div>
+            </div>
+            </div>
+        </div>
+            <!--   Core JS Files   -->
+
+            @Scripts.Render("~/bundles/bootstrap")
+
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<GlobalYouthWeb.Models.Blog>
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <div class="content-grids">
+            <div class="col-md-8 content-main">
+                <div class="content-grid">
+                    @foreach (var item in Model)
+                    {
+                        <div class="content-grid-info">
+                            <img src="~/images/@Html.DisplayFor(modelItem => item.BlogImagePath)" alt="" />
+                            <div class="post-info">
+                                <h4>@Html.ActionLink("READ MORE", "SingleBlog", new { id = item.ID }) @Html.DisplayFor(modelItem => item.PostDate)</h4>
+                                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                                @Html.ActionLink("READ MORE", "Details", new { id = item.ID })
+                            </div>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Edit this page here...", "Edit", new { id = item.ID })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </p>
+                    }
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 content-right">
+                <div class="recent">
+                    <h3>RECENT POSTS</h3>
+                    @foreach (var post in Model)
+                    {
+                        <ul>
+
+
+                            <li>@Html.ActionLink(post.Title, "SingleBlog", new { id = post.ID })</li>
+                        </ul>
+
+
+
+                    }
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</div>

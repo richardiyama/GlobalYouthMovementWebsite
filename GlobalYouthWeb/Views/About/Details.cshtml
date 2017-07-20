@@ -1,0 +1,131 @@
+﻿@model GlobalYouthWeb.Models.About
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>About</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePathOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePathOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TitleTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitleTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TitleThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitleThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TitleFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitleFour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodyFive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodyFive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TitleFive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitleFive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BodySix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodySix)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePathTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePathTwo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

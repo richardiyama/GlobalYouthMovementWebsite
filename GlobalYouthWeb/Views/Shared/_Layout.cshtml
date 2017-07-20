@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Humanity a Society & People Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Humanity Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+
+    <!--start-smoth-scrolling-->
+    @Scripts.Render("~/bundles/Smoothscroll")
+    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+    </script>
+    <!--start-smoth-scrolling-->
+</head>
+<body>
+    <!--head-->
+    <div class="head" id="home">
+        <div class="container">
+            <div class="head-top">
+                <div class="col-md-6 h-left">
+                    <p>+123 456 7897 , +132 567 8977</p>
+                </div>
+                <div class="col-md-6 h-right">
+                    <ul>
+                        <li><a href="#"><span class="fb"> </span></a></li>
+                        <li><a href="#"><span class="twit"> </span></a></li>
+                        <li><a href="#"><span class="pin"> </span></a></li>
+                        <li><a href="#"><span class="rss"> </span></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!--head-->
+    <!--header-->
+    <div class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    @Html.ActionLink("Humanity", "Index", "Home")
+</div>
+                <div class="head-right">
+                    <div class="top-nav">
+                        <span class="menu"><img src="~/images/nav-icon.png" alt=""> </span>
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")<span class="glyphicon glyphicon-home"></span></li>
+                            <li>@Html.ActionLink("About", "About", "Home")<span class="glyphicon glyphicon-info-sign"></span></li>
+                            <li>@Html.ActionLink("Event", "Event", "Home")<span class="glyphicon glyphicon-certificate"></span></li>
+                            <li>@Html.ActionLink("Gallery", "Gallery", "Home")<span class="glyphicon glyphicon-picture"></span></li>
+                            <li>@Html.ActionLink("Blog", "Blog", "Home")<span class="glyphicon glyphicon-comment"></span></li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")<span class="glyphicon glyphicon-envelope"></span></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <!--script-->
+                        <script>
+                            $("span.menu").click(function () {
+                                $(".top-nav ul").slideToggle(500, function () {
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--//header-->
+    
+        @RenderBody()
+        
+        <!--footer-starts-->
+        <div class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <a href="index.html"><h3>Humanity</h3></a>
+                    <div class="copy-right">
+                        <p>&copy; @DateTime.Now.Year - Ceayama Software Solutions</p>
+                    </div>
+                    <a href="#home" class="scroll"><img src="~/images/top-arrow.png" alt="" /></a>
+                </div>
+            </div>
+        </div>
+        <!--footer-end-->
+    
+
+   
+    
+</body>
+</html>

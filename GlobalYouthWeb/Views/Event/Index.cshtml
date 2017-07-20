@@ -1,0 +1,62 @@
+﻿@model IEnumerable<GlobalYouthWeb.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+
+
+
+
+@foreach (var item in Model)
+{
+<!--events-starts-->
+<div class="events">
+    <div class="container">
+        <div class="events-top heading">
+            <h3>@Html.DisplayFor(modelItem => item.titleOne)</h3>
+            <p>@Html.DisplayFor(modelItem => item.bodyOne)</p>
+        </div>
+        <div class="events-bottom">
+            <div class="col-md-6 event-left">
+                <img src="~/images/@Html.DisplayFor(modelItem => item.ImagePath)" alt="" />
+                <div class="event">
+                    <h4>@Html.DisplayFor(modelItem => item.titleTwo)</h4>
+                    <p> @Html.DisplayFor(modelItem => item.bodyTwo)</p>
+                </div>
+                <div class="date">
+                    <p>@Html.DisplayFor(modelItem => item.Date)</p>
+                </div>
+            </div>
+            <div class="col-md-3 event-right">
+                <div class="e-1">
+
+                    <p> @Html.DisplayFor(modelItem => item.bodyThree)</p>
+                </div>
+                <div class="e-2">
+
+                    <p> @Html.DisplayFor(modelItem => item.bodyFour)</p>
+                </div>
+            </div>
+            <div class="col-md-3 event-right">
+                <div class="e-1">
+
+                    <p> @Html.DisplayFor(modelItem => item.bodyFive)</p>
+                </div>
+                <div class="e-2">
+
+                    <p> @Html.DisplayFor(modelItem => item.bodySix)</p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<p>
+   @Html.ActionLink("Edit this page here...", "Edit", new { id = item.ID })
+</p>
+
+}
+<!--events-end-->

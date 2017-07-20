@@ -1,0 +1,476 @@
+﻿@model GlobalYouthWeb.Models.Gallery
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<ol class="breadcrumb">
+
+    <li class="breadcrumb-item">Create<i class="fa fa-angle-right"></i></li>
+</ol>
+
+
+@using (Html.BeginForm("Create", "Gallery", null, FormMethod.Post,
+                                                                  new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="grid-form">
+
+        <div class="grid-form1">
+
+            <h3>Gallery</h3>
+            <div class="tab-content">
+                <div class="tab-pane active" id="horizontal-form">
+                    <form class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleOne, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleOne, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleOne, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathOne, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathOne" title="Upload a  image"
+                                       type="file" name="fileOne" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathOne, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathOneTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathOneTwo" title="Upload a  image"
+                                       type="file" name="fileTwo" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathOneTwo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleTwo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleTwo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyTwo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodyTwo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathTwo" title="Upload a  image"
+                                       type="file" name="fileThree" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathTwo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />                        
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathTwoTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathTwoTwo" title="Upload a  image"
+                                       type="file" name="fileFour" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathTwoTwo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleThree, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleThree, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleThree, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                         <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyThree, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyThree, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodyThree, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathThree, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathThree" title="Upload a  image"
+                                       type="file" name="fileFive" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathThree, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathThreeTwo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathThreeTwo" title="Upload a  image"
+                                       type="file" name="fileSix" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathThreeTwo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleFour, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleFour, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleFour, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyFour, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyFour, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodyFour, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathFour, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathFour" title="Upload a  image"
+                                       type="file" name="fileSeven" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathFour, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathFourThree, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathFourThree" title="Upload a  image"
+                                       type="file" name="fileEight" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathFourThree, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleFive, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleFive, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleFive, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyFive, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyFive, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodyFive, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathFive, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathFive" title="Upload a  image"
+                                       type="file" name="fileNine" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathFive, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathFiveFour, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathFiveFour" title="Upload a  image"
+                                       type="file" name="fileTen" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathFiveFour, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleSix, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleSix, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleSix, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodySix, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodySix, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodySix, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathSix, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathSix" title="Upload a  image"
+                                       type="file" name="fileEleven" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathSix, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathSixFive, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathSixFive" title="Upload a  image"
+                                       type="file" name="fileTweleve" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathSixFive, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleSeven, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleSeven, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleSeven, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodySeven, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodySeven, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodySeven, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathSeven, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathSeven" title="Upload a  image"
+                                       type="file" name="fileThirteen" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathSeven, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathSevenSix, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathSevenSix" title="Upload a  image"
+                                       type="file" name="fileFourteen" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathSevenSix, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleEight, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleEight, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleEight, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyEight, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyEight, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodyEight, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathEight, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathEight" title="Upload a  image"
+                                       type="file" name="fileFifteen" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathEight, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathEightSeven, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathEightSeven" title="Upload a  image"
+                                       type="file" name="fileSixteen" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathEightSeven, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleNine, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleNine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleNine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyNine, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyNine, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodyNine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathNine, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathNine" title="Upload a  image"
+                                       type="file" name="fileSeventeen" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathNine, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ImagePathNineEight, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input id="ImagePathNineEight" title="Upload a  image"
+                                       type="file" name="fileEighteen" accept=".jpg,.png,.jpeg,.gif" />
+                                @Html.ValidationMessageFor(model => model.ImagePathNineEight, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TitleTen, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TitleTen, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TitleTen, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BodyTen, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.BodyTen, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.BodyTen, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                        <center>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Create"
+                                           class="btn-primary btn" />
+                                </div>
+                            </div>
+
+                        </center>
+
+                        <br />
+                        <br />
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

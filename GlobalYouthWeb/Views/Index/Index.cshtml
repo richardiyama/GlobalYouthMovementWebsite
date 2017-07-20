@@ -1,0 +1,273 @@
+﻿@model IEnumerable<GlobalYouthWeb.Models.Index>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+
+
+@foreach (var item in Model)
+{
+<!--banner-starts-->
+<div class="banner">
+    <div class="container">
+        <div class="banner-top">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="banner-text">
+                                <h3>@Html.DisplayFor(modelItem => item.bannerTitleOne)</h3>
+                                <p>@Html.DisplayFor(modelItem => item.bannerBodyOne)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-text">
+                                <h3>@Html.DisplayFor(modelItem => item.bannerTitleTwo)</h3>
+                                <p>@Html.DisplayFor(modelItem => item.bannerBodyTwo)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-text">
+                                <h3>@Html.DisplayFor(modelItem => item.bannerTitleThree)</h3>
+                                <p>@Html.DisplayFor(modelItem => item.bannerBodyThree)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!--banner-end-->
+<!--FlexSlider-->
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/jqueryflexslider")
+<script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+</script>
+<!--End-slider-script-->
+<!--welcome-starts-->
+<div class="welcome">
+    <div class="container">
+        <div class="welcome-top">
+            <div class="col-md-4 welcome-left heading">
+                <h2>@Html.DisplayFor(modelItem => item.welcomeTitle)</h2>
+                <h5>@Html.DisplayFor(modelItem => item.welcomeSubTitle)</h5>
+                <p>@Html.DisplayFor(modelItem => item.welcomeBody)</p>
+            </div>
+            <div class="col-md-4 welcome-left">
+                <div class="welcome-one">
+                    <div class="wel-left">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </div>
+                    <div class="wel-right">
+                        <h4>@Html.DisplayFor(modelItem => item.welcomeContentTitleOne)</h4>
+                        <p>@Html.DisplayFor(modelItem => item.welcomeContentOne)</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="welcome-two">
+                    <div class="wel-left">
+                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                    </div>
+                    <div class="wel-right">
+                        <h4>@Html.DisplayFor(modelItem => item.welcomeContentTitleTwo)</h4>
+                        <p>@Html.DisplayFor(modelItem => item.welcomeContentTwo)</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-4 welcome-left">
+                <div class="welcome-one">
+                    <div class="wel-left">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    </div>
+                    <div class="wel-right">
+                        <h4>@Html.DisplayFor(modelItem => item.welcomeContentTitleThree)</h4>
+                        <p>@Html.DisplayFor(modelItem => item.welcomeContentThree)</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="welcome-two">
+                    <div class="wel-left">
+                        <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+                    </div>
+                    <div class="wel-right">
+                        <h4>@Html.DisplayFor(modelItem => item.welcomeContentTitleFour)</h4>
+                        <p>@Html.DisplayFor(modelItem => item.welcomeContentFour)</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--welcome-end-->
+<!--events-starts-->
+<div class="events">
+    <div class="container">
+        <div class="events-top heading">
+            <h3>@Html.DisplayFor(modelItem => item.eventTitle)</h3>
+            <p>@Html.DisplayFor(modelItem => item.eventBody)</p>
+        </div>
+        <div class="events-bottom">
+            <div class="col-md-6 event-left">
+                <img src="~/images/@Html.DisplayFor(modelItem => item.eventImagePathOne)" alt="" />
+                <div class="event">
+                    <h4>@Html.DisplayNameFor(model => model.eventContentTitleOne)</h4>
+                    <p>@Html.DisplayFor(modelItem => item.eventContentOne)</p>
+                </div>
+                <div class="date">
+                    <p>@Html.DisplayFor(modelItem => item.eventDate)</p>
+                </div>
+            </div>
+            <div class="col-md-3 event-right">
+                <div class="e-1">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.eventImagePathTwo)" alt="" />
+                    <h4>@Html.DisplayFor(modelItem => item.eventTitleTwo)</h4>
+                </div>
+                <div class="e-2">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.eventImagePathThree)" alt="" />
+                    <h4>@Html.DisplayFor(modelItem => item.eventTitleThree)</h4>
+                </div>
+            </div>
+            <div class="col-md-3 event-right">
+                <div class="e-1">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.eventImagePathFour)" alt="" />
+                    <h4>@Html.DisplayFor(modelItem => item.eventTitleFour)</h4>
+                </div>
+                <div class="e-2">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.eventImagePathFive)" alt="" />
+                    <h4>@Html.DisplayFor(modelItem => item.eventTitleFive)</h4>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--events-end-->
+<!--help-starts-->
+<div class="help">
+    <div class="help-left">
+        <img src="~/images/@Html.DisplayFor(modelItem => item.helpImagePath)" alt="" />
+    </div>
+    <div class="help-right heading">
+        <h3>@Html.DisplayFor(modelItem => item.helpTitle)</h3>
+        <h5>@Html.DisplayFor(modelItem => item.helpSubTitle)</h5>
+        <p>@Html.DisplayFor(modelItem => item.helpContent)</p>
+        <div class="tool">
+            <a class="tooltips" href="#">
+                <span></span>
+            </a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--help-end-->
+<!--team-starts-->
+<div class="team">
+    <div class="container">
+        <div class="team-top heading">
+            <h3>@Html.DisplayFor(modelItem => item.teamTitle)</h3>
+        </div>
+        <div class="team-bottom">
+            <div class="col-md-3 team-left wow bounceIn animated" data-wow-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+                <a href="#">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.teamImagePathOne)" alt="">
+                    <div class="captn">
+                        <h4>@Html.DisplayFor(modelItem => item.teamNameOne)</h4>
+                        <p>@Html.DisplayFor(modelItem => item.teamNameContentOne)</p>
+                    </div>
+                    <div class="team-text">
+                        <h5>@Html.DisplayFor(modelItem => item.teamTextNameOne)</h5>
+                        <p>@Html.DisplayFor(modelItem => item.teamTextContentOne)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 team-left wow bounceIn animated" data-wow-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+                <a href="#">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.teamImagePathTwo)" alt="">
+                    <div class="captn">
+                        <h4>@Html.DisplayFor(modelItem => item.teamNameTwo)</h4>
+                        <p>@Html.DisplayFor(modelItem => item.teamNameContentTwo)</p>
+                    </div>
+                    <div class="team-text">
+                        <h5>@Html.DisplayFor(modelItem => item.teamTextNameTwo)</h5>
+                        <p>@Html.DisplayFor(modelItem => item.teamTextContentTwo)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 team-left wow bounceIn animated" data-wow-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+                <a href="#">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.teamImagePathThree)" alt="">
+                    <div class="captn">
+                        <h4>@Html.DisplayFor(modelItem => item.teamNameThree)</h4>
+                        <p>@Html.DisplayFor(modelItem => item.teamNameContentThree)</p>
+                    </div>
+                    <div class="team-text">
+                        <h5>@Html.DisplayFor(modelItem => item.teamTextNameThree)</h5>
+                        <p>@Html.DisplayFor(modelItem => item.teamTextContentThree)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 team-left wow bounceIn animated" data-wow-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+                <a href="#">
+                    <img src="~/images/@Html.DisplayFor(modelItem => item.teamImagePathFour)" alt="">
+                    <div class="captn">
+                        <h4>@Html.DisplayFor(modelItem => item.teamNameFour)</h4>
+                        <p>@Html.DisplayFor(modelItem => item.teamNameContentFour)</p>
+                    </div>
+                    <div class="team-text">
+                        <h5>@Html.DisplayFor(modelItem => item.teamTextNameFour)</h5>
+                        <p>@Html.DisplayFor(modelItem => item.teamTextContentFour)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--team-end-->
+<!--address-starts-->
+<div class="address">
+    <div class="container">
+        <div class="address-top">
+            <div class="col-md-4 add-left">
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                <p>
+                    <label>@Html.DisplayFor(modelItem => item.companyName)</label>
+                    @Html.DisplayFor(modelItem => item.addressContent)
+                </p>
+            </div>
+            <div class="col-md-4 add-left">
+                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                <p>
+                  @Html.DisplayFor(modelItem => item.mobileOne)
+                    <br>@Html.DisplayFor(modelItem => item.mobileTwo)
+                </p>
+            </div>
+            <div class="col-md-4 add-left">
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <p><a href="mailto:example@email.com">@Html.DisplayFor(modelItem => item.companyEmail) </a></p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Edit this page here...", "Edit", new { id = item.ID })
+</p>
+
+<!--address-end-->
+}
