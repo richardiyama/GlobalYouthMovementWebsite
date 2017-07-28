@@ -28,6 +28,7 @@ namespace GlobalYouthWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            
             Gallery gallery = db.Galleries.Find(id);
             if (gallery == null)
             {
