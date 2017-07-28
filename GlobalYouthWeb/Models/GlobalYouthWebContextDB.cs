@@ -19,6 +19,7 @@ namespace GlobalYouthWeb.Models
         {
         }
 
+        
         public System.Data.Entity.DbSet<GlobalYouthWeb.Models.About> Abouts { get; set; }
 
         public System.Data.Entity.DbSet<GlobalYouthWeb.Models.Contact> Contacts { get; set; }
