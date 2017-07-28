@@ -22,6 +22,7 @@ namespace GlobalYouthWeb.Models
 
         [DataType(DataType.MultilineText)]
         public string BlogContent { get; set; }
+        
         public string BlogImagePath { get; set; }
        
 
