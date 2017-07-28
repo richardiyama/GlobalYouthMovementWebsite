@@ -14,6 +14,7 @@ namespace GlobalYouthWeb.Controllers
     {
         private GlobalYouthWebContextDB db = new GlobalYouthWebContextDB();
 
+        
         // GET: Contact
         public ActionResult Index()
         {
