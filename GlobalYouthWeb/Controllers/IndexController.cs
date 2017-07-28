@@ -28,6 +28,7 @@ namespace GlobalYouthWeb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            
             Index index = db.Indices.Find(id);
             if (index == null)
             {
