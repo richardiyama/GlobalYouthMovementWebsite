@@ -8,6 +8,7 @@ namespace GlobalYouthWeb
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                              "~/Scripts/jquery.min.js",
                         "~/Scripts/jquery-2.1.4.min.js"));
