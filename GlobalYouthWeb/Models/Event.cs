@@ -22,6 +22,7 @@ namespace GlobalYouthWeb.Models
         
         public string ImagePath { get; set; }
 
+        
         [Required(ErrorMessage = "Title is required")]
         [StringLength(50)]
         public string titleTwo { get; set; }
