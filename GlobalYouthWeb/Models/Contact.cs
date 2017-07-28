@@ -15,6 +15,7 @@ namespace GlobalYouthWeb.Models
         [StringLength(20)]
         public string TitleOne { get; set; }
 
+        
         [Required(ErrorMessage = "Title is required")]
         [StringLength(20)]
         public string TitleTwo { get; set; }
