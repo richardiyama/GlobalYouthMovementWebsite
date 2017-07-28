@@ -15,6 +15,7 @@ namespace GlobalYouthWeb.Controllers
     {
         private GlobalYouthWebContextDB db = new GlobalYouthWebContextDB();
 
+        
         // GET: Blog
         public ActionResult Index()
         {
