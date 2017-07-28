@@ -16,6 +16,7 @@ namespace GlobalYouthWeb.Models
         public string TitleOne { get; set; }
 
         
+       
         public string ImagePathOne { get; set; }
 
       
