@@ -31,6 +31,7 @@ namespace GlobalYouthWeb.Models
         [StringLength(31)]
         public string bannerBodyTwo { get; set; }
 
+        
         [Required(ErrorMessage = "Title is required")]
         [StringLength(26)]
         public string bannerTitleThree { get; set; }
