@@ -21,6 +21,7 @@ namespace GlobalYouthWeb.Controllers
             return View(db.Events.ToList());
         }
 
+        
         // GET: Event/Details/5
         public ActionResult Details(int? id)
         {
