@@ -9,7 +9,6 @@ namespace GlobalYouthWeb.Models
     public class About
     {
 
-
         public int ID { get; set; }
 
         [Required(ErrorMessage = "An Title is required")]
