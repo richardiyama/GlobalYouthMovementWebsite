@@ -54,6 +54,7 @@ namespace GlobalYouthWeb.Models
         [StringLength(500)]
         public string welcomeBody { get; set; }
 
+       
         [Required(ErrorMessage = "Title is required")]
         [StringLength(50)]
         public string welcomeContentTitleOne { get; set; }
