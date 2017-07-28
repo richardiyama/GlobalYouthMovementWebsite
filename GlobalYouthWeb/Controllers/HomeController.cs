@@ -46,6 +46,7 @@ namespace GlobalYouthWeb.Controllers
             return View(db.Blogs.ToList());
         }
 
+        
         public ActionResult SingleBlog(int? id)
         {
             if (id == null)
