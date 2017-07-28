@@ -18,6 +18,7 @@ namespace GlobalYouthWeb.Models
                        ErrorMessage = "Email doesn't look like a valid email address.")]
         public string SenderEmail { get; set; }
 
+        
         [Required(ErrorMessage = "Your must provide a PhoneNumber")]
         [Display(Name = "Sender's Mobile Number")]
         [DataType(DataType.PhoneNumber)]
