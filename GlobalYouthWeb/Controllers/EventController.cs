@@ -36,6 +36,7 @@ namespace GlobalYouthWeb.Controllers
             return View(@event);
         }
 
+        
         // GET: Event/Create
         public ActionResult Create()
         {
